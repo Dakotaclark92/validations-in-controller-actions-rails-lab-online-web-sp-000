@@ -3,11 +3,4 @@ class Author < ActiveRecord::Base
 end
 
 Author.create(name: "John Doe").valid?
-
-
-    class Person < ActiveRecord::Base
-      validates :name, presence: true
-    end
-     
-    Person.create(name: "John Doe").valid? # => true
-    Person.create(name: nil).valid? # => false
+Author.create(name: nil).valid?
